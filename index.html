@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/reset.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fontawesome.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Lista de Produtos</title>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <h1>Shop now</h1>
+    </header>
+    <!-- PARTE PRINCIPAL -->
+    <main>
+      <section class="filtersContainer">
+        <div id="botoesContainer">
+          <button
+            class="estiloGeralBotoes estiloGeralBotoes--filter"
+            id="button-all"
+          >
+            Todos Produtos
+          </button>
+          <button
+            class="estiloGeralBotoes estiloGeralBotoes--filter"
+            id="button-hortifruti"
+          >
+            Hortifruti
+          </button>
+          <button
+            class="estiloGeralBotoes estiloGeralBotoes--filter"
+            id="button-bakery"
+          >
+            Panificadora
+          </button>
+          <button
+            class="estiloGeralBotoes estiloGeralBotoes--filter"
+            id="button-dairy"
+          >
+            Laticínios
+          </button>
+        </div>
+
+        <div class="containerBuscaPorNome">
+          <input
+            type="text"
+            placeholder="Pesquisar por"
+            class="campoBuscaPorNome"
+          />
+          <button
+            class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
+          >
+            <img src="./src/img/search.png" alt="lupa" />
+          </button>
+        </div>
+      </section>
+      <!-- CONTAINER DE PRODUTOS E CARRINHOS -->
+      <div class="container-produtos-e-carrinhos">
+        <section class="containerVitrine">
+          <div class="containerListaProdutos">
+            <ul>
+
+            </ul>
+          </div>
+        </section>
+        <!-- CARRINHO DE COMPRAS -->
+        <section class="carrinho-de-compras">
+          <div id="carrinho">
+            <div class="cabecalho-carrinho">
+              <span class="material-symbols-outlined"> shopping_cart </span>
+              <h1>Carrinho</h1>
+            </div>
+            
+            <div class="secao-carrinho" id="container-carrinho">
+              <img id="carrinho-vazio" src="/src/img/carrinho-vazio.png">  
+            <!-- CONTAINER CARRINHO -->
+              <ul id="vitrine-carrinho"></ul>
+            </div>
+            <section class="info-qtd">
+              <p id="quantidade" >quantidade:</p>
+              <p id="info-qtd" >0</p>
+            </section>
+            <section class="info-valor">
+              <p id="total" >total:</p>
+              <p id="info-valor" >R$0,00</p>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="src/js/dataProdutos.js"></script>
+    <script src="src/js/script.js"></script>
+  </body>
+</html>
